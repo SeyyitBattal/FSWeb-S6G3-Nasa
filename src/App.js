@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import MainArea from "./MainArea";
+import ManuelData from "./ManuelData";
+import MyRightSide from "./MyRightSide";
 
 function App() {
-  ////////////////
-
   return (
     <div className="App">
       <div className="myHeader">Header Bölümü</div>
@@ -11,15 +12,7 @@ function App() {
       <div className="mainArea">
         <div className="myLeftSide">Sol taraftaki Side Bar</div>
         <div className="myRightSide">
-          ANA BÖLÜM
-          <p>
-            NASA uygulamasını yapmak için README.md dosyasıdaki talimatları
-            takip edin İyi eğlenceler!{" "}
-            <span role="img" aria-label="go!">
-              🚀
-            </span>
-            !
-          </p>
+          <MyRightSide />
         </div>
       </div>
       <hr />
