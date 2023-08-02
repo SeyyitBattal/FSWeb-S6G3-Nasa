@@ -6,6 +6,45 @@
   height: 40vmin;
   pointer-events: none;
 }
+.myHeader {
+  padding: 1rem;
+  margin: 1rem;
+  border: 10px;
+  border-radius: 1rem;
+  border: solid rgb(82, 82, 82);
+}
+
+.mainArea {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 1rem;
+  border: 10px;
+  border-radius: 1rem;
+  border: solid rgb(82, 82, 82);
+}
+
+.myLeftSide {
+  padding: 1rem;
+  border: 10px;
+  border-radius: 1rem;
+  border: solid rgb(82, 82, 82);
+}
+.myRightSide {
+  padding: 1rem;
+  margin: 1rem;
+  border: 10px;
+  border-radius: 1rem;
+  border: solid rgb(82, 82, 82);
+  margin-left: 13rem;
+}
+.myFooter {
+  padding: 1rem;
+  margin: 1rem;
+  border: 10px;
+  border-radius: 1rem;
+  border: solid rgb(82, 82, 82);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
