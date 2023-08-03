@@ -7,7 +7,9 @@ const Deepest = (props) => {
       <div>Ait olduğu kişi: {nasaDegeri.copyright}</div>
       <div>Tarih: {nasaDegeri.date}</div>
       <div>Açıklama: {nasaDegeri.explanation}</div>
-      <div>HD Hali: {nasaDegeri.hdurl}</div>
+      <div>
+        HD Hali:<img src={nasaDegeri.hdurl} className="imgSettings"></img>
+      </div>
       <div>Başlık: {nasaDegeri.title}</div>
       <div>URL: {nasaDegeri.url}</div>
       <div></div>

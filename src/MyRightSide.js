@@ -1,32 +1,41 @@
 import { useEffect, useState } from "react";
 import ManuelData from "./ManuelData";
 import Deepest from "./Deepest";
+import axios from "axios";
 
 const MyRightSide = () => {
+  const [nasaDegerleri, setNasaDegerleri] = useState();
+  console.log(nasaDegerleri);
+
   useEffect(() => {
-    // API ÇAĞRISI İÇİN
+    axios
+      // .post("https://reqres.in/api/seyyit", ManuelData)
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=LACBKcwRfx1G7fybtjMkb2hlZKowIxLO2ZC9VXC0&count=4"
+      )
+      .then(function (response) {
+        setNasaDegerleri(response.data);
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     console.log("MyRightSide ta useEffect oluşturuldu!");
   }, []);
 
-  //   const gelen = async function () {
-  //     const linktenGelen = await axios
-  //       .get(
-  //         "https://api.nasa.gov/planetary/LACBKcwRfx1G7fybtjMkb2hlZKowIxLO2ZC9VXC0"
-  //       )
-  //       .then(console.log("Alınan çıktı: ", linktenGelen.data));
-  //   };
-  //   gelen();
-
-  const [nasaDegerleri, setNasaDegerleri] = useState(ManuelData);
-  console.log(nasaDegerleri);
-
   return (
     <div className="rightContainer">
-      <div>! DATALAR BURADA !</div>
-      {nasaDegerleri.map((nasaDegeri, index) => {
-        return <Deepest key={index} nasaDegeri={nasaDegeri} />;
-      })}
-      <br></br>
+      {!!nasaDegerleri ? (
+        <>
+          <div>! DATALAR BURADA !</div>
+          {nasaDegerleri.map((nasaDegeri, index) => {
+            return <Deepest key={index} nasaDegeri={nasaDegeri} />;
+          })}
+          <br></br>
+        </>
+      ) : (
+        <p>Yükleniyor...</p>
+      )}
     </div>
   );
 };

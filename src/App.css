@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+}
+body {
+  background-color: #02044d;
+  color: white;
 }
 
 .App-logo {
@@ -12,16 +15,17 @@
   border: 10px;
   border-radius: 1rem;
   border: solid rgb(82, 82, 82);
+  text-align: center;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
 }
 
 .mainArea {
   display: flex;
-  flex-wrap: wrap;
-  padding: 1rem;
   margin: 1rem;
-  border: 10px;
-  border-radius: 1rem;
-  border: solid rgb(82, 82, 82);
+  text-align: center;
 }
 
 .myLeftSide {
@@ -29,6 +33,9 @@
   border: 10px;
   border-radius: 1rem;
   border: solid rgb(82, 82, 82);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .myRightSide {
   padding: 1rem;
@@ -38,12 +45,22 @@
   border: solid rgb(82, 82, 82);
   margin-left: 13rem;
 }
+.imgSettings {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+.footerButton {
+  margin-right: 1rem;
+  text-align: center;
+}
 .myFooter {
   padding: 1rem;
   margin: 1rem;
   border: 10px;
   border-radius: 1rem;
   border: solid rgb(82, 82, 82);
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
