@@ -3,6 +3,13 @@
 body {
   background-color: #02044d;
   color: white;
+  background-image: url("./nasa-logo.png");
+
+  background-position: center top;
+  background-repeat: repeat;
+  background-size: 40rem;
+  background-blend-mode: over;
+  background-attachment: fixed;
 }
 
 .App-logo {
@@ -26,6 +33,7 @@ body {
   display: flex;
   margin: 1rem;
   text-align: center;
+  margin-top: 5rem;
 }
 
 .myLeftSide {
