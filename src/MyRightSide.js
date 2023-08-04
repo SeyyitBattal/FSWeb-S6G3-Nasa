@@ -11,7 +11,7 @@ const MyRightSide = () => {
     axios
       // .post("https://reqres.in/api/seyyit", ManuelData)
       .get(
-        "https://api.nasa.gov/planetary/apod?api_key=LACBKcwRfx1G7fybtjMkb2hlZKowIxLO2ZC9VXC0&count=4"
+        "https://api.nasa.gov/planetary/apod?api_key=LACBKcwRfx1G7fybtjMkb2hlZKowIxLO2ZC9VXC0&count=1"
       )
       .then(function (response) {
         setNasaDegerleri(response.data);
